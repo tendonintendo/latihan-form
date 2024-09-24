@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTML Form Example</title>
+    <title>Job Application Form</title>
     <style>
-        .vertical-frame {
+        .form-container {
             border: 2px solid red;
-            padding: 10px;
+            padding: 15px;
             display: inline-block;
             margin: auto;
+            background-color: #f9f9f9;
         }
         body {
             display: flex;
@@ -18,54 +19,65 @@
             align-items: center;
             height: 100vh;
             margin: 0;
+            font-family: Arial, sans-serif;
         }
     </style>
 </head>
 <body>
 
-    <h2>Student Vehicle Registration Form</h2>
-    <div class="vertical-frame">
-        <form method="post" action="submit_form.php">
-            <!-- Text Input -->
-            <label for="Name">Name:</label><br>
-            <input type="text" id="Name" name="Name" size="20" maxlength="30"><br><br>
+    <h2>Job Application Form</h2>
+    <div class="form-container">
+        <form method="post" action="submit_job_application.php">
+            <!-- Full Name -->
+            <label for="fullName">Full Name:</label><br>
+            <input type="text" id="fullName" name="fullName" size="30" maxlength="50"><br><br>
 
-            <!-- Address Input -->
-            <label for="Address">Address:</label><br>
-            <input type="Address" id="Address" name="Address" size="20" maxlength="30"><br><br>
+            <!-- Email -->
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" size="30" maxlength="50"><br><br>
 
-            <!-- Checkbox Input -->
-            <label>Vehicle you use:</label><br>
-            <input type="checkbox" name="Vehicle" value="Car"> Car<br>
-            <input type="checkbox" name="Vehicle" value="Motorcycle"> Motorcycle<br>
-            <input type="checkbox" name="Vehicle" value="Bicycle"> Bicycle<br>
-            <input type="checkbox" name="Vehicle" value="Other"> Other<br><br>
+            <!-- Phone Number -->
+            <label for="phone">Phone Number:</label><br>
+            <input type="tel" id="phone" name="phone" size="20" maxlength="15"><br><br>
+
+            <!-- Position Applied -->
+            <label for="position">Position Applied For:</label><br>
+            <input type="text" id="position" name="position" size="30" maxlength="50"><br><br>
+
+            <!-- Experience -->
+            <label>Years of Experience:</label><br>
+            <input type="radio" name="experience" value="1-3"> 1-3 years<br>
+            <input type="radio" name="experience" value="3-5"> 3-5 years<br>
+            <input type="radio" name="experience" value="5+"> 5+ years<br><br>
+
+            <!-- Skills -->
+            <label>Key Skills:</label><br>
+            <input type="checkbox" name="skills" value="Programming"> Programming<br>
+            <input type="checkbox" name="skills" value="Project Management"> Project Management<br>
+            <input type="checkbox" name="skills" value="Data Analysis"> Data Analysis<br>
+            <input type="checkbox" name="skills" value="Other"> Other<br><br>
             
-            <!-- Radio Button -->
-            <label>Gender:</label><br>
-            <input type="radio" name="gender" value="male"> Male<br>
-            <input type="radio" name="gender" value="female"> Female<br><br>
-            
-            <!-- Dropdown Menu -->
-            <label for="City">City:</label><br>
-            <select id="City" name="City">
-                <option value="">Select City</option>
-                <option value="JKT">Jakarta</option>
-                <option value="BDG">Bandung</option>
-                <option value="SBY">Surabaya</option>
+            <!-- Dropdown for Education Level -->
+            <label for="education">Highest Level of Education:</label><br>
+            <select id="education" name="education">
+                <option value="">Select Education Level</option>
+                <option value="highschool">High School</option>
+                <option value="bachelor">Bachelor's Degree</option>
+                <option value="master">Master's Degree</option>
+                <option value="phd">PhD</option>
             </select><br><br>
-            
-            <!-- File Input -->
-            <label for="file">Photo:</label><br>
-            <input type="file" id="file" name="file"><br><br>
 
-            <!-- Textarea Input -->
-            <label for="message">Message:</label><br>
-            <textarea id="message" name="message" rows="4" cols="30"></textarea><br><br>
+            <!-- File Input for Resume -->
+            <label for="resume">Upload Resume:</label><br>
+            <input type="file" id="resume" name="resume"><br><br>
+
+            <!-- Cover Letter -->
+            <label for="coverLetter">Cover Letter:</label><br>
+            <textarea id="coverLetter" name="coverLetter" rows="5" cols="30" placeholder="Write a brief cover letter"></textarea><br><br>
             
             <!-- Submit and Reset Buttons -->
-            <input type="submit" value="Submit">
-            <input type="reset" value="Reset">
+            <input type="submit" value="Submit Application">
+            <input type="reset" value="Reset Form">
         </form>
     </div>
 
